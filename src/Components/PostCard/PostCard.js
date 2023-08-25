@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { IMAGE_URL, API_KEY } from "../../Constants/Constant";
 import YouTube from "react-youtube";
@@ -9,6 +9,10 @@ function PostCart(props) {
   const [video, setVideo] = useState(false);
   const [videoKey, setVideoKey] = useState("");
 
+
+  useEffect(() => {
+    console.log('Sheheem');
+  },[])
   let imagePath;
   if (props.poster) {
     imagePath = props.item.poster_path;
